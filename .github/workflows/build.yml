@@ -51,8 +51,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          # mode=max exports every intermediate layer to the GHA cache API,
+          # which has tight size/throughput quotas - for this image (a huge
+          # CUDA devel base plus diffusers/transformers) that made the first
+          # build stall for over an hour on the cache-export step alone.
+          # mode=min only caches the final image layers, which is enough to
+          # speed up rebuilds after small source changes without hitting
+          # that quota.
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-to: type=gha,mode=min
 
       - name: Make package public
         run: |
