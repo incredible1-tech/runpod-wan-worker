@@ -1,0 +1,11 @@
+{
+    "input": {
+        "prompt": "Photorealistic documentary cinematography, shot on a modern digital cinema camera, natural window light. A cup of coffee sits on a wooden table, steam rising slowly and curling upward. Shallow depth of field, 85mm look, medium close-up, slow dolly in.",
+        "negative_prompt": "anime, cartoon, illustration, 2D, cel-shaded, manga, CGI, 3D render, video game, low-poly, painting, drawing, sketch, watermark, text, subtitle, logo, bright tones, overexposed, static, blurred details, worst quality, low quality, jpeg artifacts, ugly, deformed, disfigured, extra limbs, poorly drawn hands, poorly drawn face, mutated, still image, out of frame, duplicate",
+        "width": 832,
+        "height": 480,
+        "num_frames": 81,
+        "fps": 16,
+        "guidance_scale": 5.0
+    }
+}
